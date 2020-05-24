@@ -1,3 +1,6 @@
 bases:
   - ../base/common/
-  - ../base/team1/
+  - ../base/teams/
+  - ./new-team-test/
+  - ./new-team-test/
+  - ./new-team-test/

@@ -11,11 +11,11 @@ spec:
             - --manifest-generation=true
             - --memcached-hostname=flux-memcached.flux-system
             - --memcached-service=
-            - --git-poll-interval=5m
-            - --sync-interval=5m
+            - --git-poll-interval=120s
+            - --sync-interval=120s
             - --ssh-keygen-dir=/var/fluxd/keygen
-            - --k8s-allow-namespace=team1
-            - --git-url=git@github.com:org/dev-team1
+            - --k8s-allow-namespace=new-team-test
+            - --git-url=git@github.com:RedOystein/multi-tenancy.git
             - --git-branch=master
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
@@ -25,4 +25,4 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: flux
-    namespace: team1
+    namespace: new-team-test

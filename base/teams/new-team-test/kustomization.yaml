@@ -1,10 +1,10 @@
-namespace: team1
+namespace: new-team-test
 resources:
   - namespace.yaml
   - rbac.yaml
   - psp.yaml
 bases:
-  - ../../base/flux/
+  - ../../flux/
 patchesStrategicMerge:
   - flux-patch.yaml
 configMapGenerator:
