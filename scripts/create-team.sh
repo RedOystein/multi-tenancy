@@ -30,5 +30,5 @@ do
 done
 
 echo "${TEAM_NAME} created at ${TEAM_DIR}"
-echo "  - ./${TEAM_NAME}/" >> "${REPO_ROOT}/${CLUSTER_FILE_PATH}/kustomization.yaml"
+echo "  - ./${TEAM_NAME}/" >> "${REPO_ROOT}/base/teams/kustomization.yaml"
 echo "${TEAM_NAME} added to ${REPO_ROOT}/${CLUSTER_FILE_PATH}/kustomization.yaml"

@@ -1,7 +1,7 @@
 apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
-  name: default-psp-new-team-test
+  name: default-psp-dev-team2
   annotations:
     seccomp.security.alpha.kubernetes.io/allowedProfileNames: '*'
 spec:
@@ -30,23 +30,23 @@ spec:
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: default-psp-new-team-test
+  name: default-psp-dev-team2
 rules:
   - apiGroups: ['policy']
     resources: ['podsecuritypolicies']
     verbs:     ['use']
     resourceNames:
-      - default-psp-new-team-test
+      - default-psp-dev-team2
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: default-psp-new-team-test
+  name: default-psp-dev-team2
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: default-psp-new-team-test
+  name: default-psp-dev-team2
 subjects:
   - kind: ServiceAccount
     name: default
-    namespace: new-team-test
+    namespace: dev-team2

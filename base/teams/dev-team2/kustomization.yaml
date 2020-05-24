@@ -1,4 +1,4 @@
-namespace: new-team-test
+namespace: dev-team2
 resources:
   - namespace.yaml
   - rbac.yaml
